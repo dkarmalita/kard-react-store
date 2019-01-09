@@ -221,7 +221,7 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     compress: true,
-    port: 9101,
+    port: 9102,
     stats: {
       children: false,
       maxModules: 0,

@@ -1,17 +1,5 @@
-const webpack = require('webpack');
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const pkg = require('./package.json');
-
-/**
- * Helper to transfet peerDependencies to object of externals
- * @param  {Object} peers - pkg.peerDependencies section
- * @return {Object} - { react: 'react', ... }
- */
-function peersToExternals(peers){
-  return Object.keys( peers || {} ).map( pkgName => pkgName )
-  .reduce((obj, cur, i) => { return { ...obj, [cur]: cur }; }, {});
-}
 
 module.exports = {
   entry: path.join(__dirname, pkg.module),
